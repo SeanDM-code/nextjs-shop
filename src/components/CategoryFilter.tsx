@@ -5,7 +5,6 @@ import React from "react";
 const CategoryFilter = ({ selectedCategory, setSelectedCategory }: any) => {
   const handleCategoryChange = (e: any) => {
     setSelectedCategory(e.target.value);
-    console.log(e.target.value);
   };
 
   return (

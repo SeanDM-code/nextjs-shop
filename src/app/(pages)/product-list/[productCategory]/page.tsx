@@ -18,6 +18,7 @@ const ProductList = ({ params }: any) => {
     }
   }, [categoryParam]);
 
+  //Filtering logic for search query and category later sorted for price in ascending order by default
   const filteredProducts: Product[] = products
     .filter((product) => {
       const matchesSearchQuery = product.name
@@ -96,7 +97,6 @@ const ProductList = ({ params }: any) => {
         });
 
         setProducts(modifiedData);
-        console.log(modifiedData);
       });
   }, []);
 
@@ -119,7 +119,6 @@ const ProductList = ({ params }: any) => {
             <ProductCard cardData={product} key={product.id}></ProductCard>
           ))}
         </div>
-        <div>{categoryParam}</div>
       </div>
     </div>
   );
