@@ -1,7 +1,6 @@
 "use server";
 
 import { Product } from "@/app/lib/definitions";
-import ProductEditForm from "@/components/ProductEditForm";
 import ProductSpecifics from "@/components/ProductSpecifics";
 import getSingleProduct from "@/components/getSingleProduct";
 
@@ -10,8 +9,8 @@ const ProductDetail = async ({ params }: any) => {
   const productId = params.productId;
 
   try {
-    // product = await getSingleProduct(productId);
-    product = await getSingleProduct();
+    product = await getSingleProduct(productId);
+    // product = await getSingleProduct();
   } catch (error) {
     console.error("Error fetching products:", error);
   }

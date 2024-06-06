@@ -1,14 +1,14 @@
 import { Product } from "@/app/lib/definitions";
 import React from "react";
 
-const getSingleProduct = async () => {
+// const getSingleProduct = async () => {
+//   const response = await fetch(
+//     `https://mocki.io/v1/a634f75a-f04a-4d08-8a53-e53dee0c6182`
+//   );
+const getSingleProduct = async (productId: string) => {
   const response = await fetch(
-    `https://mocki.io/v1/a634f75a-f04a-4d08-8a53-e53dee0c6182`
+    `https://api.restful-api.dev/objects/${productId}`
   );
-  // const getSingleProduct = async (productId: string) => {
-  //   const response = await fetch(
-  //     `https://api.restful-api.dev/objects/${productId}`
-  //   );
   if (!response.ok) {
     throw new Error("Failed to fetch product");
   }
