@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ProductImages from "./productImages";
 import ProductEditModal from "./ProductEditModal";
 
@@ -16,7 +16,6 @@ const ProductSpecifics = ({ productData }: any) => {
 
   const openModal = () => {
     setIsModalOpen(true);
-    console.log("Opening modal", isModalOpen); // Add this line
   };
 
   const saveChanges = (updatedProduct: any) => {
@@ -74,7 +73,6 @@ const ProductSpecifics = ({ productData }: any) => {
           )}
         </div>
       </div>
-      {/* {isEditing && <ProductEditForm product={product} />} */}
     </div>
   );
 };

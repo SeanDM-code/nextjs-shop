@@ -1,4 +1,3 @@
-// ProductEditModal.tsx
 import React, { useState } from "react";
 import { Product } from "@/app/lib/definitions";
 import {
@@ -39,7 +38,6 @@ const ProductEditModal: React.FC<ProductEditModalProps> = ({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Edited product:", editedProduct);
     saveChanges(editedProduct);
     closeModal();
   };
